@@ -1,0 +1,210 @@
+{
+    "topLevelSystems": [
+        {
+            "systemID": {
+                "systemUUID": "60e2ad50-a389-11ef-93f0-05501559304d",
+                "naturalKey": "1:13:000002006D6CECCC"
+            },
+            "components": {
+                "60e2ad50-a389-11ef-93f0-05501559304d": {
+                    "componentID": {
+                        "systemID": {
+                            "systemUUID": "60e2ad50-a389-11ef-93f0-05501559304d",
+                            "naturalKey": "1:13:000002006D6CECCC"
+                        },
+                        "componentType": 1,
+                        "naturalKey": "1:13:000002006D6CECCC"
+                    },
+                    "properties": {
+                        "cust_num": {
+                            "stringValue": "4624520"
+                        },
+                        "snapshot_id": {
+                            "stringValue": "cbcb3880-f4f6-11ef-569b-65fd8ccf5cd8"
+                        },
+                        "stor_type": {
+                            "stringValue": "block"
+                        },
+                        "type": {
+                            "stringValue": "FlashSystem 900 - 9840"
+                        },
+                        "vendor": {
+                            "stringValue": "IBM"
+                        },
+                        "model": {
+                            "stringValue": "AE2"
+                        },
+                        "events_status": {
+                            "shortValue": 23
+                        },
+                        "firmware": {
+                            "stringValue": "1.6.1.5 (build 126.2.0000000000000.515.226)"
+                        },
+                        "cc": {
+                            "stringValue": "897"
+                        },
+                        "events_status_label": {
+                            "stringValue": "info_acknowledged"
+                        },
+                        "natural_key": {
+                            "stringValue": "1:13:000002006D6CECCC"
+                        },
+                        "topology": {
+                            "stringValue": "standard"
+                        },
+                        "stor_sys_id": {
+                            "stringValue": "60e2ad50-a389-11ef-93f0-05501559304d"
+                        },
+                        "name_icon": {
+                            "shortValue": 100
+                        },
+                        "time_zone": {
+                            "stringValue": "US/Arizona"
+                        },
+                        "stor_sys_os_type": {
+                            "shortValue": 56
+                        },
+                        "serial_num": {
+                            "stringValue": "6856008"
+                        },
+                        "data_collection_label": {
+                            "stringValue": "running"
+                        },
+                        "status_label": {
+                            "stringValue": "online"
+                        },
+                        "condition": {
+                            "shortValue": 38
+                        },
+                        "element_manager_url": {
+                            "stringValue": "https://9.11.92.127"
+                        },
+                        "condition_label": {
+                            "stringValue": "error"
+                        },
+                        "name": {
+                            "stringValue": "tpcflash900a"
+                        },
+                        "ip_addr": {
+                            "stringValue": "9.11.92.127"
+                        },
+                        "total_cap_bytes": {
+                            "longValue": 11434352181248
+                        },
+                        "status": {
+                            "shortValue": 16
+                        },
+                        "cap_to_be_licensed_bytes": {
+                            "longValue": 11434352181248
+                        }
+                    },
+                    "opType": "ADD"
+                }
+            },
+            "summarizationLevel": "SAMPLE"
+        },
+        {
+            "systemID": {
+                "systemUUID": "f64e84f0-b319-11ef-91e0-b75a1f505ce3",
+                "naturalKey": "1:39:00000203208045CA"
+            },
+            "components": {
+                "f64e84f0-b319-11ef-91e0-b75a1f505ce3": {
+                    "componentID": {
+                        "systemID": {
+                            "systemUUID": "f64e84f0-b319-11ef-91e0-b75a1f505ce3",
+                            "naturalKey": "1:39:00000203208045CA"
+                        },
+                        "componentType": 1,
+                        "naturalKey": "1:39:00000203208045CA"
+                    },
+                    "properties": {
+                        "cust_num": {
+                            "stringValue": "4600178"
+                        },
+                        "unmonitored_back_end_cap_bytes": {
+                            "longValue": 148176371712
+                        },
+                        "snapshot_id": {
+                            "stringValue": "ab33e000-cc23-11ef-5430-d988bcf469ae"
+                        },
+                        "stor_type": {
+                            "stringValue": "block"
+                        },
+                        "type": {
+                            "stringValue": "FlashSystem V9000 - 9846"
+                        },
+                        "vendor": {
+                            "stringValue": "IBM"
+                        },
+                        "model": {
+                            "stringValue": "AC2"
+                        },
+                        "firmware": {
+                            "stringValue": "8.2.1.18 (build 147.22.2309141703000)"
+                        },
+                        "cc": {
+                            "stringValue": "897"
+                        },
+                        "natural_key": {
+                            "stringValue": "1:39:00000203208045CA"
+                        },
+                        "topology": {
+                            "stringValue": "standard"
+                        },
+                        "stor_sys_id": {
+                            "stringValue": "f64e84f0-b319-11ef-91e0-b75a1f505ce3"
+                        },
+                        "monitored_back_end_cap_bytes": {
+                            "longValue": 0
+                        },
+                        "name_icon": {
+                            "shortValue": 118
+                        },
+                        "time_zone": {
+                            "stringValue": "Asia/Calcutta"
+                        },
+                        "stor_sys_os_type": {
+                            "shortValue": 54
+                        },
+                        "serial_num": {
+                            "stringValue": "00000203208045CA"
+                        },
+                        "data_collection_label": {
+                            "stringValue": "running"
+                        },
+                        "status_label": {
+                            "stringValue": "online"
+                        },
+                        "condition": {
+                            "shortValue": 38
+                        },
+                        "element_manager_url": {
+                            "stringValue": "https://9.11.91.134"
+                        },
+                        "condition_label": {
+                            "stringValue": "error"
+                        },
+                        "name": {
+                            "stringValue": "V9000-tpcv9k1"
+                        },
+                        "ip_addr": {
+                            "stringValue": "9.11.91.134,2002:090b:e006:0091:0009:0011:0091:0134"
+                        },
+                        "total_cap_bytes": {
+                            "longValue": 2435047227392
+                        },
+                        "status": {
+                            "shortValue": 38
+                        },
+                        "cap_to_be_licensed_bytes": {
+                            "longValue": 2435047227392
+                        }
+                    },
+                    "opType": "ADD"
+                }
+            },
+            "summarizationLevel": "SAMPLE"
+        }
+    ]
+}

@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Search, ChevronLeft, ChevronRight, HardDrive, Settings, Bell, Users, BarChart2, Shield, Zap, ChevronUp, ChevronDown } from 'lucide-react';
 import { StorageSystem } from '../types';
 
+import file from "../storage_system.json";
+
 interface SidebarProps {
   storageSystems: StorageSystem[];
   onSelectSystem: (system: StorageSystem) => void;
@@ -14,8 +16,11 @@ const Sidebar: React.FC<SidebarProps> = ({ storageSystems, onSelectSystem }) => 
   const [insightsOpen, setInsightsOpen] = useState(false);
   const navigate = useNavigate(); // Initialize navigate function
 
-  const filteredSystems = storageSystems.filter(system => 
-    system.name.toLowerCase().includes(searchTerm.toLowerCase())
+  // Extract customer numbers from the JSON file
+  const custNumbers: string[] = file.topLevelSystems.flatMap(system =>
+    Object.values(system.components)
+      .map(component => component.properties?.name?.stringValue)
+      .filter(Boolean) // Remove undefined values
   );
 
   const getStatusColor = (status: 'healthy' | 'warning' | 'critical') => {
@@ -58,20 +63,26 @@ const Sidebar: React.FC<SidebarProps> = ({ storageSystems, onSelectSystem }) => 
       </div>
 
       {/* Storage Systems List */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-hidden">
         <div className={`px-4 py-2 text-xs font-semibold text-gray-400 uppercase ${collapsed ? 'text-center' : ''}`}>
           {!collapsed && 'Storage Systems'}
         </div>
-        <ul>
-          {filteredSystems.map(system => (
-            <li key={system.id} className="mb-1">
+        <ul className="overflow-y-auto max-h-[calc(100vh-180px)]">
+          {custNumbers.map((name, index) => (
+            <li key={index} className="mb-1">
               <button
-                onClick={() => onSelectSystem(system)}
+                onClick={() => {
+                  // Find the corresponding storage system if it exists
+                  const selectedSystem = storageSystems.find(system => system.name === name);
+                  if (selectedSystem) {
+                    onSelectSystem(selectedSystem);
+                  }
+                }}
                 className={`w-full flex items-center px-4 py-3 hover:bg-gray-800 rounded-md transition-colors ${collapsed ? 'justify-center' : ''}`}
               >
-                <span className={`h-2.5 w-2.5 rounded-full ${getStatusColor(system.status)} mr-2`}></span>
+                <span className={`h-2.5 w-2.5 rounded-full ${getStatusColor('healthy')} mr-2`}></span>
                 {!collapsed && (
-                  <span className="truncate">{system.name}</span>
+                  <span className="truncate">{name}</span>
                 )}
               </button>
             </li>
@@ -83,7 +94,7 @@ const Sidebar: React.FC<SidebarProps> = ({ storageSystems, onSelectSystem }) => 
       <div className="p-4 border-t border-gray-700">
         <ul>
           <li className="mb-2">
-            <button onClick={()=>navigate('/')} className={`w-full flex items-center px-4 py-2 hover:bg-gray-800 rounded-md transition-colors ${collapsed ? 'justify-center' : ''}`}>
+            <button onClick={() => navigate('/')} className={`w-full flex items-center px-4 py-2 hover:bg-gray-800 rounded-md transition-colors ${collapsed ? 'justify-center' : ''}`}>
               <BarChart2 className="h-5 w-5 text-gray-400" />
               {!collapsed && <span className="ml-3">Dashboard</span>}
             </button>
@@ -94,18 +105,7 @@ const Sidebar: React.FC<SidebarProps> = ({ storageSystems, onSelectSystem }) => 
               {!collapsed && <span className="ml-3">Alerts</span>}
             </button>
           </li>
-          <li className="mb-2">
-            <button className={`w-full flex items-center px-4 py-2 hover:bg-gray-800 rounded-md transition-colors ${collapsed ? 'justify-center' : ''}`}>
-              <Shield className="h-5 w-5 text-gray-400" />
-              {!collapsed && <span className="ml-3">Security</span>}
-            </button>
-          </li>
-          <li className="mb-2">
-            <button className={`w-full flex items-center px-4 py-2 hover:bg-gray-800 rounded-md transition-colors ${collapsed ? 'justify-center' : ''}`}>
-              <Users className="h-5 w-5 text-gray-400" />
-              {!collapsed && <span className="ml-3">Users</span>}
-            </button>
-          </li>
+          {/* Insights Section */}
           <li className="mb-2">
             <button
               onClick={() => setInsightsOpen(!insightsOpen)}
@@ -125,18 +125,21 @@ const Sidebar: React.FC<SidebarProps> = ({ storageSystems, onSelectSystem }) => 
                   <li key={item} className="mb-1">
                     <button
                       onClick={() => {
-                        if (item === "Reclaimation") {
-                          navigate('/reclaimation'); // Navigate to Reclaimation page
-                        }
-                        
-                        if (item === "Reduceable") {
-                          navigate('/reduceable'); // Navigate to Reclaimation page
-                        }
-                        if (item === "Drives") {
-                          navigate('/drive'); // Navigate to Reclaimation page
-                        }
-                        if (item === "Encloser") {
-                          navigate('/encloser'); // Navigate to Reclaimation page
+                        switch (item) {
+                          case "Reclaimation":
+                            navigate('/reclaimation');
+                            break;
+                          case "Reduceable":
+                            navigate('/reduceable');
+                            break;
+                          case "Drives":
+                            navigate('/drive');
+                            break;
+                          case "Encloser":
+                            navigate('/encloser');
+                            break;
+                          default:
+                            navigate('/');
                         }
                       }}
                       className="w-full flex items-center px-4 py-2 hover:bg-gray-800 rounded-md transition-colors"
@@ -147,6 +150,18 @@ const Sidebar: React.FC<SidebarProps> = ({ storageSystems, onSelectSystem }) => 
                 ))}
               </ul>
             )}
+          </li>
+          <li className="mb-2">
+            <button className={`w-full flex items-center px-4 py-2 hover:bg-gray-800 rounded-md transition-colors ${collapsed ? 'justify-center' : ''}`}>
+              <Shield className="h-5 w-5 text-gray-400" />
+              {!collapsed && <span className="ml-3">Security</span>}
+            </button>
+          </li>
+          <li className="mb-2">
+            <button className={`w-full flex items-center px-4 py-2 hover:bg-gray-800 rounded-md transition-colors ${collapsed ? 'justify-center' : ''}`}>
+              <Users className="h-5 w-5 text-gray-400" />
+              {!collapsed && <span className="ml-3">Users</span>}
+            </button>
           </li>
           <li>
             <button className={`w-full flex items-center px-4 py-2 hover:bg-gray-800 rounded-md transition-colors ${collapsed ? 'justify-center' : ''}`}>

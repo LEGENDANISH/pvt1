@@ -1,0 +1,356 @@
+{
+    "components": [
+        {
+            "componentID": {
+                "systemID": {
+                    "systemUUID": "8cb80150-a18b-11ef-962a-a11b7cd95e63"
+                },
+                "componentType": 14,
+                "naturalKey": "14:f147"
+            },
+            "properties": {
+                "unused_cap_bytes": {
+                    "longValue": 0
+                },
+                "cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "snapshot_id": {
+                    "stringValue": "b7e5a150-f8ea-11ef-58ac-7ae0cef0be26"
+                },
+                "t0_flash_cap_per": {
+                    "floatValue": 0.0
+                },
+                "ent_hdd_cap_bytes": {
+                    "longValue": 0
+                },
+                "shortfall_per": {
+                    "floatValue": 0.0
+                },
+                "t2_flash_cap_bytes": {
+                    "longValue": 0
+                },
+                "nl_hdd_cap_per": {
+                    "floatValue": 0.0
+                },
+                "sgcopy_protected": {
+                    "shortValue": 0
+                },
+                "nl_hdd_cap_bytes": {
+                    "longValue": 0
+                },
+                "id": {
+                    "stringValue": "f147"
+                },
+                "provisioned_cap_per": {
+                    "floatValue": 100.0
+                },
+                "used_cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "pool_icon": {
+                    "shortValue": 156
+                },
+                "raid_level": {
+                    "stringValue": "RAID 6"
+                },
+                "hosts": {
+                    "stringValue": "4"
+                },
+                "pool": {
+                    "stringValue": "SAN_3"
+                },
+                "node_icon": {
+                    "shortValue": 152
+                },
+                "format": {
+                    "stringValue": "FB"
+                },
+                "name_icon": {
+                    "shortValue": 177
+                },
+                "t1_flash_cap_per": {
+                    "floatValue": 100.0
+                },
+                "hosts_count": {
+                    "intValue": 4
+                },
+                "stor_sys_os_type": {
+                    "shortValue": 25
+                },
+                "status_label": {
+                    "stringValue": "normal"
+                },
+                "node": {
+                    "stringValue": "Node 1"
+                },
+                "vol_num": {
+                    "intValue": 71
+                },
+                "lss_lcu": {
+                    "stringValue": "f1"
+                },
+                "written_cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "avail_cap_bytes": {
+                    "longValue": 0
+                },
+                "name": {
+                    "stringValue": "BUP__f147"
+                },
+                "used_cap_per": {
+                    "floatValue": 100.0
+                },
+                "t1_flash_cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "status": {
+                    "shortValue": 16
+                },
+                "flashcopy": {
+                    "stringValue": "4"
+                },
+                "t0_flash_cap_bytes": {
+                    "longValue": 0
+                },
+                "thin_provisioned": {
+                    "stringValue": "0"
+                },
+                "stor_sys": {
+                    "stringValue": "2107.75LDK71"
+                },
+                "stor_sys_icon": {
+                    "shortValue": 102
+                },
+                "hosts_icon": {
+                    "shortValue": 209
+                },
+                "uid": {
+                    "stringValue": "600507630affd14e000000000000f147"
+                },
+                "last_data_collection": {
+                    "dateValue": 1741087561562
+                },
+                "encryption": {
+                    "stringValue": "0"
+                },
+                "easy_tier": {
+                    "stringValue": "allpools"
+                },
+                "block_size": {
+                    "intValue": 512
+                },
+                "easy_tier_status": {
+                    "stringValue": "yes"
+                },
+                "primary_used_cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "natural_key": {
+                    "stringValue": "14:f147"
+                },
+                "primary_provisioned_cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "stor_sys_id": {
+                    "stringValue": "8cb80150-a18b-11ef-962a-a11b7cd95e63"
+                },
+                "pool_id": {
+                    "stringValue": "10:P3"
+                },
+                "t2_flash_cap_per": {
+                    "floatValue": 0.0
+                },
+                "ent_hdd_cap_per": {
+                    "floatValue": 0.0
+                },
+                "unprotected": {
+                    "booleanValue": true
+                },
+                "node_id": {
+                    "stringValue": "6:1"
+                }
+            },
+            "opType": "ADD"
+        },
+        {
+            "componentID": {
+                "systemID": {
+                    "systemUUID": "8cb80150-a18b-11ef-962a-a11b7cd95e63"
+                },
+                "componentType": 14,
+                "naturalKey": "14:f148"
+            },
+            "properties": {
+                "unused_cap_bytes": {
+                    "longValue": 0
+                },
+                "cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "snapshot_id": {
+                    "stringValue": "b7e5a150-f8ea-11ef-58ac-7ae0cef0be26"
+                },
+                "t0_flash_cap_per": {
+                    "floatValue": 0.0
+                },
+                "ent_hdd_cap_bytes": {
+                    "longValue": 0
+                },
+                "shortfall_per": {
+                    "floatValue": 0.0
+                },
+                "t2_flash_cap_bytes": {
+                    "longValue": 0
+                },
+                "nl_hdd_cap_per": {
+                    "floatValue": 0.0
+                },
+                "sgcopy_protected": {
+                    "shortValue": 0
+                },
+                "nl_hdd_cap_bytes": {
+                    "longValue": 0
+                },
+                "id": {
+                    "stringValue": "f148"
+                },
+                "provisioned_cap_per": {
+                    "floatValue": 100.0
+                },
+                "used_cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "pool_icon": {
+                    "shortValue": 156
+                },
+                "raid_level": {
+                    "stringValue": "RAID 6"
+                },
+                "hosts": {
+                    "stringValue": "4"
+                },
+                "pool": {
+                    "stringValue": "SAN_3"
+                },
+                "node_icon": {
+                    "shortValue": 152
+                },
+                "format": {
+                    "stringValue": "FB"
+                },
+                "name_icon": {
+                    "shortValue": 177
+                },
+                "t1_flash_cap_per": {
+                    "floatValue": 100.0
+                },
+                "hosts_count": {
+                    "intValue": 4
+                },
+                "stor_sys_os_type": {
+                    "shortValue": 25
+                },
+                "status_label": {
+                    "stringValue": "normal"
+                },
+                "node": {
+                    "stringValue": "Node 1"
+                },
+                "vol_num": {
+                    "intValue": 72
+                },
+                "lss_lcu": {
+                    "stringValue": "f1"
+                },
+                "written_cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "avail_cap_bytes": {
+                    "longValue": 0
+                },
+                "name": {
+                    "stringValue": "BUP__f148"
+                },
+                "used_cap_per": {
+                    "floatValue": 100.0
+                },
+                "t1_flash_cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "status": {
+                    "shortValue": 16
+                },
+                "flashcopy": {
+                    "stringValue": "4"
+                },
+                "t0_flash_cap_bytes": {
+                    "longValue": 0
+                },
+                "thin_provisioned": {
+                    "stringValue": "0"
+                },
+                "stor_sys": {
+                    "stringValue": "2107.75LDK71"
+                },
+                "stor_sys_icon": {
+                    "shortValue": 102
+                },
+                "hosts_icon": {
+                    "shortValue": 209
+                },
+                "uid": {
+                    "stringValue": "600507630affd14e000000000000f148"
+                },
+                "last_data_collection": {
+                    "dateValue": 1741087561562
+                },
+                "encryption": {
+                    "stringValue": "0"
+                },
+                "easy_tier": {
+                    "stringValue": "allpools"
+                },
+                "block_size": {
+                    "intValue": 512
+                },
+                "easy_tier_status": {
+                    "stringValue": "yes"
+                },
+                "primary_used_cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "natural_key": {
+                    "stringValue": "14:f148"
+                },
+                "primary_provisioned_cap_bytes": {
+                    "longValue": 32212254720
+                },
+                "stor_sys_id": {
+                    "stringValue": "8cb80150-a18b-11ef-962a-a11b7cd95e63"
+                },
+                "pool_id": {
+                    "stringValue": "10:P3"
+                },
+                "t2_flash_cap_per": {
+                    "floatValue": 0.0
+                },
+                "ent_hdd_cap_per": {
+                    "floatValue": 0.0
+                },
+                "unprotected": {
+                    "booleanValue": true
+                },
+                "node_id": {
+                    "stringValue": "6:1"
+                }
+            },
+            "opType": "ADD"
+        }
+    ],
+    "requestSummary": {
+        "requestRowCount": 2,
+        "totalRowCount": 2
+    }
+}
